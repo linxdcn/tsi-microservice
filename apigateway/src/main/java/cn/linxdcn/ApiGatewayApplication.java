@@ -5,15 +5,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.sidecar.EnableSidecar;
 
 /**
- * cn.linxdcn.Application
+ * cn.linxdcn.ApiGatewayApplication
  *
  * @author dansan.lxd@alibaba-inc.com
  * @date 12/02/2018 1:54 PM
  */
 @SpringBootApplication
 @EnableSidecar
-public class Application {
+public class ApiGatewayApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ApiGatewayApplication.class, args);
     }
 }

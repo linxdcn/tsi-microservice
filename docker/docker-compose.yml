@@ -15,3 +15,11 @@ gateway:
   links:
    - discovery
    - configserver
+   - hello
+hello:
+  image: lxd/hello
+  ports:
+   - "9001:9001"
+  links:
+   - discovery
+   - configserver

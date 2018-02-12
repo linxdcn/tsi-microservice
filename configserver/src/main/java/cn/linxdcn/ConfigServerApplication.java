@@ -8,7 +8,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * cn.linxdcn.Application
+ * cn.linxdcn.ConfigServerApplication
  *
  * @author dansan.lxd@alibaba-inc.com
  * @date 11/02/2018 2:09 PM
@@ -18,8 +18,8 @@ import org.springframework.context.annotation.Configuration;
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableConfigServer
-public class Application {
+public class ConfigServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ConfigServerApplication.class, args);
     }
 }

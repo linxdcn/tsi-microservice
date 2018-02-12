@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- * cn.linxdcn.Application
+ * cn.linxdcn.DiscoveryApplication
  *
  * @author dansan.lxd@alibaba-inc.com
  * @date 11/02/2018 3:16 PM
@@ -13,8 +13,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
 @EnableEurekaServer
-public class Application {
+public class DiscoveryApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(DiscoveryApplication.class, args);
     }
 }
