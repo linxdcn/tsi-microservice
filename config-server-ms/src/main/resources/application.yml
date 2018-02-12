@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: configserver
+    hostname: config-server-ms
   client:
     registerWithEureka: true
     fetchRegistry: true

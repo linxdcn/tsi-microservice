@@ -9,28 +9,24 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hello</artifactId>
+    <artifactId>api-gateway-ms</artifactId>
     <packaging>jar</packaging>
-    <name>hello</name>
+    <name>api-gateway-ms</name>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <artifactId>spring-cloud-netflix-sidecar</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
+            <artifactId>spring-cloud-starter</artifactId>
         </dependency>
     </dependencies>
-
-    <properties>
-        <docker.image.prefix>lxd</docker.image.prefix>
-    </properties>
 
     <build>
         <plugins>

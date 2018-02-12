@@ -2,24 +2,24 @@ discovery:
   image: lxd/discovery
   ports:
    - "8761:8761"
-configserver:
-  image: lxd/configserver
+config-server-ms:
+  image: lxd/config-server-ms
   ports:
    - "8888:8888"
   links:
    - discovery
-gateway:
-  image: lxd/apigateway
+api-gateway-ms:
+  image: lxd/api-gateway-ms
   ports:
    - "10000:10000"
   links:
    - discovery
-   - configserver
-   - hello
-hello:
-  image: lxd/hello
+   - config-server-ms
+   - hello-ms
+hello-ms:
+  image: lxd/hello-ms
   ports:
    - "9001:9001"
   links:
    - discovery
-   - configserver
+   - config-server-ms

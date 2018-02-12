@@ -9,10 +9,10 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>hello</module>
-        <module>configserver</module>
+        <module>hello-ms</module>
+        <module>config-server-ms</module>
         <module>discovery</module>
-        <module>apigateway</module>
+        <module>api-gateway-ms</module>
     </modules>
 
     <parent>
@@ -26,6 +26,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <docker.plugin.version>0.4.13</docker.plugin.version>
+        <docker.image.prefix>lxd</docker.image.prefix>
     </properties>
 
     <dependencyManagement>
