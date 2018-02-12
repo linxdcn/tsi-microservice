@@ -1,0 +1,17 @@
+discovery:
+  image: lxd/discovery
+  ports:
+   - "8761:8761"
+configserver:
+  image: lxd/configserver
+  ports:
+   - "8888:8888"
+  links:
+   - discovery
+gateway:
+  image: lxd/apigateway
+  ports:
+   - "10000:10000"
+  links:
+   - discovery
+   - configserver
