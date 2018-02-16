@@ -20,3 +20,8 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
+zuul:
+  routes:
+    hello:
+      path: /hello/**
+      serviceId: hello-ms

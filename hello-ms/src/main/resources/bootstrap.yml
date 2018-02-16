@@ -4,5 +4,6 @@ spring:
   cloud:
     config:
       uri: http://config-server-ms:8888
+
 encrypt:
   failOnError: false

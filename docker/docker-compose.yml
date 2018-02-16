@@ -1,25 +1,27 @@
-discovery:
-  image: lxd/discovery
-  ports:
-   - "8761:8761"
-config-server-ms:
-  image: lxd/config-server-ms
-  ports:
-   - "8888:8888"
-  links:
-   - discovery
-api-gateway-ms:
-  image: lxd/api-gateway-ms
-  ports:
-   - "10000:10000"
-  links:
-   - discovery
-   - config-server-ms
-   - hello-ms
-hello-ms:
-  image: lxd/hello-ms
-  ports:
-   - "9001:9001"
-  links:
-   - discovery
-   - config-server-ms
+version: "2"
+services:
+  discovery:
+    image: lxd/discovery
+    ports:
+     - "8761:8761"
+  config-server-ms:
+    image: lxd/config-server-ms
+    ports:
+     - "8888:8888"
+    links:
+     - discovery
+  hello-ms:
+    image: lxd/hello-ms
+    ports:
+     - "9001:9001"
+    links:
+     - discovery
+     - config-server-ms
+  api-gateway-ms:
+    image: lxd/api-gateway-ms
+    ports:
+     - "10000:10000"
+    links:
+     - discovery
+     - config-server-ms
+     - hello-ms
