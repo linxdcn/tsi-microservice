@@ -25,3 +25,6 @@ zuul:
     hello:
       path: /hello/**
       serviceId: hello-ms
+    data:
+      path: /data/**
+      serviceId: data-ms

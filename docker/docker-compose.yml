@@ -10,13 +10,6 @@ services:
      - "8888:8888"
     links:
      - discovery
-  hello-ms:
-    image: lxd/hello-ms
-    ports:
-     - "9001:9001"
-    links:
-     - discovery
-     - config-server-ms
   api-gateway-ms:
     image: lxd/api-gateway-ms
     ports:
@@ -25,3 +18,18 @@ services:
      - discovery
      - config-server-ms
      - hello-ms
+     - data-ms
+  hello-ms:
+    image: lxd/hello-ms
+    ports:
+     - "9001:9001"
+    links:
+     - discovery
+     - config-server-ms
+  data-ms:
+    image: lxd/data-ms
+    ports:
+     - "9002:9002"
+    links:
+     - discovery
+     - config-server-ms
