@@ -2,22 +2,26 @@ package cn.linxdcn.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * Created by linxiaodong on 17/02/2018.
  */
 @Controller
+@ApiIgnore
 public class HomeController {
     @RequestMapping("/")
-    @ResponseBody
-    public String home() {
-       return "Welcome to data-ms";
+    public String index() {
+        return "index";
     }
 
-    @RequestMapping("/test")
-    @ResponseBody
-    public String test() {
-        return "test";
+    @RequestMapping("/home")
+    public String home() {
+        return "index";
+    }
+
+    @RequestMapping("/doc")
+    public String doc() {
+        return "api";
     }
 }
