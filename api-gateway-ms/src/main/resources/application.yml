@@ -28,3 +28,9 @@ zuul:
     data:
       path: /data/**
       serviceId: data-ms
+    tsi:
+      path: /tsi/**
+      serviceId: tsi-ms
+    fem:
+      path: /fem/**
+      serviceId: fem-ms

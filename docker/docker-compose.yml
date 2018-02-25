@@ -19,6 +19,8 @@ services:
      - config-server-ms
      - hello-ms
      - data-ms
+     - tsi-ms
+     - fem-ms
   hello-ms:
     image: lxd/hello-ms
     ports:
@@ -30,6 +32,20 @@ services:
     image: lxd/data-ms
     ports:
      - "9002:9002"
+    links:
+     - discovery
+     - config-server-ms
+  tsi-ms:
+    image: lxd/tsi-ms
+    ports:
+     - "9003:9003"
+    links:
+     - discovery
+     - config-server-ms
+  fem-ms:
+    image: lxd/fem-ms
+    ports:
+     - "9004:9004"
     links:
      - discovery
      - config-server-ms
