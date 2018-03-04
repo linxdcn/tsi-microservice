@@ -20,7 +20,7 @@ public class ApplicationSwaggerConfig {
         Docket docket = new Docket(DocumentationType.SWAGGER_2);
         @SuppressWarnings("deprecation")
         ApiInfo apiInfo = new ApiInfo(
-                "iS3-Server Document API",
+                "iS3-Data Document API",
                 "API Document",
                 "V1.0.0",
                 "",
