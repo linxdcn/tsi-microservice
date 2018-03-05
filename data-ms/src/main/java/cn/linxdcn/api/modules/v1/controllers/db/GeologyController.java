@@ -1,11 +1,9 @@
 package cn.linxdcn.api.modules.v1.controllers.db;
 
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import cn.linxdcn.api.modules.v1.models.db.dao.geology.*;
-import cn.linxdcn.api.modules.v1.models.db.entity.geology.*;
+import cn.linxdcn.api.modules.v1.services.db.dao.geology.*;
+import cn.linxdcn.api.modules.v1.services.db.entity.geology.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * Created by linxiaodong on 4/6/17.
  */
 @RestController
-@RequestMapping("geology")
+@RequestMapping("api/geology")
 @Api(value = "Geology", description = "The API about Geology", tags = "Geology")
 public class GeologyController {
     @Autowired

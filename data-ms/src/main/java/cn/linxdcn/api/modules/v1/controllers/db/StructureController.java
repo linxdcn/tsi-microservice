@@ -2,8 +2,8 @@ package cn.linxdcn.api.modules.v1.controllers.db;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import cn.linxdcn.api.modules.v1.models.db.dao.structure.*;
-import cn.linxdcn.api.modules.v1.models.db.entity.structure.*;
+import cn.linxdcn.api.modules.v1.services.db.dao.structure.*;
+import cn.linxdcn.api.modules.v1.services.db.entity.structure.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +13,7 @@ import java.util.List;
  * Created by linxiaodong on 4/19/17.
  */
 @RestController
-@RequestMapping("structure")
+@RequestMapping("api/structure")
 @Api(value = "Structure", description = "The API about Structure", tags = "Structure")
 public class StructureController {
     @Autowired

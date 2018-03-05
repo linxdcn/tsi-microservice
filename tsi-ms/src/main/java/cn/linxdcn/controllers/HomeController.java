@@ -12,6 +12,6 @@ public class HomeController {
     @RequestMapping("")
     @ResponseBody
     public String home() {
-        return "TSI-ms";
+        return "FastTSIService-ms";
     }
 }
