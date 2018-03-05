@@ -1,6 +1,6 @@
-package cn.linxdcn.api.modules.v1.services.db.dao.geology;
+package cn.linxdcn.api.modules.v1.models.db.dao.geology;
 
-import cn.linxdcn.api.modules.v1.services.db.entity.geology.Strata;
+import cn.linxdcn.api.modules.v1.models.db.entity.geology.Strata;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

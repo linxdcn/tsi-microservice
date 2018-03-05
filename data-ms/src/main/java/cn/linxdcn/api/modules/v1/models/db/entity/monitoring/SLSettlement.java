@@ -1,4 +1,4 @@
-package cn.linxdcn.api.modules.v1.services.db.entity.monitoring;
+package cn.linxdcn.api.modules.v1.models.db.entity.monitoring;
 
 import javax.persistence.*;
 import java.util.Date;

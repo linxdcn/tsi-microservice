@@ -1,9 +1,9 @@
 package cn.linxdcn.api.modules.v1.controllers.db;
 
+import cn.linxdcn.api.modules.v1.models.db.dao.structure.*;
+import cn.linxdcn.api.modules.v1.models.db.entity.structure.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import cn.linxdcn.api.modules.v1.services.db.dao.structure.*;
-import cn.linxdcn.api.modules.v1.services.db.entity.structure.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

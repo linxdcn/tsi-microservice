@@ -1,9 +1,9 @@
 package cn.linxdcn.api.modules.v1.controllers.db;
 
+import cn.linxdcn.api.modules.v1.models.db.dao.geology.*;
+import cn.linxdcn.api.modules.v1.models.db.entity.geology.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import cn.linxdcn.api.modules.v1.services.db.dao.geology.*;
-import cn.linxdcn.api.modules.v1.services.db.entity.geology.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

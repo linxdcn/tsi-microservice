@@ -1,4 +1,4 @@
-package cn.linxdcn.api.modules.v1.services.db.entity.structure;
+package cn.linxdcn.api.modules.v1.models.db.entity.structure;
 
 import javax.persistence.*;
 import java.util.Date;

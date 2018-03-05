@@ -1,6 +1,6 @@
-package cn.linxdcn.api.modules.v1.services.db.dao.monitoring;
+package cn.linxdcn.api.modules.v1.models.db.dao.monitoring;
 
-import cn.linxdcn.api.modules.v1.services.db.entity.monitoring.SLConvergence;
+import cn.linxdcn.api.modules.v1.models.db.entity.monitoring.SLConvergence;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
