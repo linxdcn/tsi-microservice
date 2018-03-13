@@ -2,35 +2,35 @@ package cn.linxdcn.api.modules.v1.DTO;
 
 public class FastTSIDTO {
     private double sett;
-    private double settd;
-    private double cov;
-    private double dl;
-    private double dc;
-    private double ds;
+    private double settDiff;
+    private double conv;
+    private double leakage;
+    private double crack;
+    private double spall;
     private boolean dynamic;
 
     public void setSett(double sett) {
         this.sett = sett;
     }
 
-    public void setSettd(double settd) {
-        this.settd = settd;
+    public void setSettDiff(double settDiff) {
+        this.settDiff = settDiff;
     }
 
-    public void setCov(double cov) {
-        this.cov = cov;
+    public void setConv(double conv) {
+        this.conv = conv;
     }
 
-    public void setDl(double dl) {
-        this.dl = dl;
+    public void setLeakage(double leakage) {
+        this.leakage = leakage;
     }
 
-    public void setDc(double dc) {
-        this.dc = dc;
+    public void setCrack(double crack) {
+        this.crack = crack;
     }
 
-    public void setDs(double ds) {
-        this.ds = ds;
+    public void setSpall(double spall) {
+        this.spall = spall;
     }
 
     public void setDynamic(boolean dynamic) {
@@ -42,24 +42,24 @@ public class FastTSIDTO {
         return sett;
     }
 
-    public double getSettd() {
-        return settd;
+    public double getSettDiff() {
+        return settDiff;
     }
 
-    public double getCov() {
-        return cov;
+    public double getConv() {
+        return conv;
     }
 
-    public double getDl() {
-        return dl;
+    public double getLeakage() {
+        return leakage;
     }
 
-    public double getDc() {
-        return dc;
+    public double getCrack() {
+        return crack;
     }
 
-    public double getDs() {
-        return ds;
+    public double getSpall() {
+        return spall;
     }
 
     public boolean isDynamic() {

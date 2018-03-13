@@ -1,6 +1,7 @@
 package cn.linxdcn.api.modules.v1.services;
 
 import cn.linxdcn.api.modules.v1.DTO.FastTSIDTO;
+import cn.linxdcn.api.modules.v1.DTO.TSIResultDTO;
 
 import java.util.Arrays;
 
@@ -25,9 +26,9 @@ public class FastTSIService {
     static double tsiMu = 3.6;
     static double tsiStd = 0.8;
 
-    public static double calc(FastTSIDTO tsiDTO) {
-        double[] input = {Math.sqrt(tsiDTO.getSett()), tsiDTO.getSettd(), tsiDTO.getCov(),
-                tsiDTO.getDl(), tsiDTO.getDc(), tsiDTO.getDs()};
+    public static TSIResultDTO calc(FastTSIDTO tsiDTO) {
+        double[] input = {Math.sqrt(tsiDTO.getSett()), tsiDTO.getSettDiff(), tsiDTO.getConv(),
+                tsiDTO.getLeakage(), tsiDTO.getCrack(), tsiDTO.getSpall()};
         double[] inputStd = getStdInput(input);
 
         double[] coef = Arrays.copyOfRange(coefficient, 0, coefficient.length);
@@ -40,7 +41,7 @@ public class FastTSIService {
         for (int i = 0; i < input.length; i++) tsiNor += coef[i] * inputStd[i];
 
         double tsi = tsiNor * tsiStd + tsiMu;
-        return tsi;
+        return new TSIResultDTO(tsi);
     }
 
     static double[] getStdInput(double[] input) {

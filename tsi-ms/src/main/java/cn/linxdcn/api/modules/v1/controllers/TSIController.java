@@ -2,6 +2,7 @@ package cn.linxdcn.api.modules.v1.controllers;
 
 import cn.linxdcn.api.modules.v1.DTO.FastTSIDTO;
 import cn.linxdcn.api.modules.v1.DTO.SettSeriesDTO;
+import cn.linxdcn.api.modules.v1.DTO.TSIResultDTO;
 import cn.linxdcn.api.modules.v1.services.FastTSIService;
 import cn.linxdcn.api.modules.v1.services.SettTimeSeriesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class TSIController {
     SettTimeSeriesService settTimeSeriesService;
 
     @RequestMapping(value = "fast", method = RequestMethod.POST)
-    public double fastTSI(@RequestBody FastTSIDTO tsiDTO) {
+    public TSIResultDTO fastTSI(@RequestBody FastTSIDTO tsiDTO) {
         return FastTSIService.calc(tsiDTO);
     }
 
