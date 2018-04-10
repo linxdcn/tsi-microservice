@@ -3,7 +3,7 @@ spring:
     active: dev
 
 server:
-  port: 10000
+  port: 10001
 
 endpoints:
   restart:
@@ -21,7 +21,19 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
+
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 60000
+
 zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
   routes:
     hello:
       path: /hello/**
